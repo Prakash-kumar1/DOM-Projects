@@ -2,6 +2,7 @@
 body{
     margin: 50px auto ;
     padding: 0;
+    background-color: lightcoral;
 }
 
 #title{
@@ -34,6 +35,7 @@ body{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size:  20px;
     font-weight: bold;
+    background-color: aqua;
 }
 
 #reset-btn{
