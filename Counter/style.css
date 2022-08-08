@@ -1,0 +1,42 @@
+
+body{
+    margin: 50px auto ;
+    padding: 0;
+}
+
+#title{
+    margin: 30px auto;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+#counter {
+    margin: 30px auto;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 100px;
+    font-weight: bolder;
+}
+
+#btn-container {
+    margin: 30px auto;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+#increase-btn , #decrease-btn , #reset-btn{
+    border-radius: 20px;
+    padding: 20px  40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size:  20px;
+    font-weight: bold;
+}
+
+#reset-btn{
+    margin-left: 50px;
+    margin-right: 50px;
+}
