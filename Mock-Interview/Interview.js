@@ -11,10 +11,10 @@ let form = document.getElementById("form") ;
 let arr = Array.from(edit.classList) ;
 let done = document.querySelector(".submit-me") ;
 let display = document.getElementById("disp") ;
-let completeds = document.getElementById("completed")
+let completeds = document.getElementById("completed") ;
 
 
-
+ 
 
 //FIRST TO SHOW THE TASK FILLING BOX
 
