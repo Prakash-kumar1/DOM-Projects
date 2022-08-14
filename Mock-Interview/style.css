@@ -1,176 +1,177 @@
-/* font family */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap");
-
-/* universal selector */
-* {
-  box-sizing: border-box;
-}
-
-/* apply font-family on body */
-body {
-  font-family: "Poppins", sans-serif;
-}
-
-/* utility classes */
-.container {
-  max-width: 1000px;
-  height: 80px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.flex {
+header{
+  background-color: chartreuse;
+  padding: 20px;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-/* header styling */
-#header {
-  width: 100%;
-  background-color: lightskyblue;
-  line-height: 80px;
-}
-/* left side navigation styling */
-.left {
-  width: 500px;
-  height: 55px;
-  margin: 13px 0;
-  background-color: whitesmoke;
-  padding: 0 20px;
-  line-height: 55px;
-  border-radius: 55px;
-}
-
-/* all section styling */
-.all {
-  height: 100%;
-  font-size: 1.2em;
-}
-.all span {
-  padding: 5px;
-}
-
-/* colors section styling */
-.colors {
-  gap: 20px;
-  align-content: center;
-}
-.colors .size {
-  width: 70px;
-  height: 40px;
-  border-radius: 13px;
-}
-
-.colors .red {
-  background-color: red;
-}
-.colors .yellow {
-  background-color: yellow;
-}
-.colors .blue {
-  background-color: blue;
-}
-.colors .black {
-  background-color: black;
-}
-
-/* checked section styling */
-.select {
-  height: 100%;
-}
-.fa-check {
-  font-size: 25px;
-  color: rgb(255, 199, 16);
-  vertical-align: middle;
-  padding: 5px;
-}
-
-/* hover effect */
-.all span:hover,
-.colors .size:hover,
-.fa-check:hover {
-  cursor: pointer;
-}
-
-/* right side btn styling */
-.btn {
-  width: 140px;
-  height: 55px;
-  border-radius: 55px;
-  border: none;
-  font-size: 1.2em;
-  line-height: 55px;
-  background-color: rgb(236, 163, 103);
-  color: white;
-  font-weight: bold;
-}
-
-.btn:hover {
-  cursor: pointer;
-}
-
-
-.box{
-  max-width: 500px;
-  height: 350px;
-  /* padding: 10px; */
-}
-
-.task{
-  width: calc(500px - 150px);
-  flex-direction: column;
-  background-color: lightskyblue;
-}
-
-.task .input{
-  width: 100%;
-  height: 85%;
-  outline: none;
-  border: none;
-  background-color: lightskyblue;
-  padding: 10%;
-  font-size: 1.5em;
-  color: white;
-  resize: none;
-}
-
-.task .done-btn{
-  width: 120px;
-  height: 10%;
-  border: none;
-  align-self: center;
-  border-radius: 20px;
-  margin-bottom: 15px;
-}
-
-.color-side{
-  width: 150px;
-  height: 100%;
-  background-color: rgba(12, 12, 12, 0.836);
-  flex-direction: column;
-  align-content: center;
+  flex-direction: row;
   justify-content: space-around;
 }
-
-.color-side .size{
-  width: 90px;
-  height: 55px;
-  border-radius: 20px;
+.all{
+  padding: 10px;
+  background-color:bisque;
+}
+button{
+  border-radius: 10px;
 }
 
-.color-side .red{
+button:hover{
+  background-color: aqua;
+}
+
+.create-task{
+  border-radius: 10px;
+  padding: 10px;
+}
+nav{
+  margin: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+/* BUTTONS THAT ARE PRESENT INSIDE EDIT CONTAINER */
+.red, .red-inside{
   background-color: red;
+  padding: 5px;
+  border-radius: 10px;
+  color: white;
 }
-
-.color-side .yellow{
-  background-color: yellow;
-}
-
-.color-side .blue{
+.blue, .blue-inside{
   background-color: blue;
+  padding: 5px;
+  border-radius: 10px;
+  color: white;
+}
+.black, .black-inside{
+  background-color: rgb(0, 0, 0);
+  padding: 5px;
+  border-radius: 10px;
+  color: white;
+}
+.yellow,.yellow-inside{
+  background-color: rgb(251, 255, 30);
+  padding: 5px;
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
 }
 
-.color-side .black{
-  background-color: black;
+
+
+/* CLASS ADDED TO CHANGE THE BOX */
+.reddish{
+  width: 300px;
+  overflow: hidden;
+  height: 220px;
+  border: 1px solid black;
+  background-color: azure;
+  border-top: 10px solid red;
+
+}
+.blackish{
+  width: 300px;
+  overflow: hidden;
+  height: 220px;
+  border: 1px solid black;
+  background-color: azure;
+  border-top: 10px solid rgb(0, 0, 0);
+}
+.blueish{
+  width: 300px;
+  overflow: hidden;
+  height: 220px;
+  background-color: azure;
+  border: 1px solid black;
+  border-top: 10px solid rgb(34, 9, 255);
+}
+.yellowish{
+  width: 300px;
+  overflow: hidden;
+  background-color: azure;
+  height: 220px;
+  border: 1px solid black;
+  border-top: 10px solid rgb(252, 255, 61);
+}
+
+/* header end first div start */
+
+#hello{
+  border: none;
+  background-color: antiquewhite;
+}
+.active{
+  background-color: antiquewhite;
+  display: flex;
+  margin-left: 400px;
+  padding: 10px;
+  position: absolute;
+  background: rgb(131, 124, 124);
+  top: 150px;
+  flex-direction: row;
+  height: 200px;
+  width: 300px;
+  justify-content: space-between;
+  z-index: 20;
+  opacity: 20;
+}
+.to-add-buttons{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.inactive{
+  display: none;
+}
+
+#disp{
+  /* background-color: aqua; */
+  height: 800px;
+  width: 200vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  z-index: 10;
+}
+
+.disp{
+  /* z-index: 10; */
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  /* background:rgb(132, 132, 216); */
+}
+.isc{
+  display: flex;
+  gap:10px;
+  margin:10px;
+}
+.bio{
+  display: none;
+}
+
+
+/* DIVS THAT CONTAIN THE ITEMS ACCORDING TO DATA */
+.completed, .redding , .blueing, .blacking, .alling, .yellowing{
+  background-color: rgb(162, 162, 153);
+  visibility: hidden;
+  display: none;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top :100px;
+  gap:20px;
+  width: auto;
+  z-index: 20;
+  height: auto;
+}
+.show{
+  display: block;
+  visibility: visible;
+  display: flex;
+  gap: 20px;
+  margin: 20px;
+  z-index: 10;
+}
+.hide{
+  display: none;
+  visibility: hidden;
 }
