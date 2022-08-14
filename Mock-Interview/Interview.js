@@ -9,7 +9,7 @@ let yellow = document.getElementsByClassName("yellow-inside")[0]
 let black = document.getElementsByClassName("black-inside")[0]
 let form = document.getElementById("form") ;
 let arr = Array.from(edit.classList) ;
-let done = document.querySelector(".submit-me")
+let done = document.querySelector(".submit-me") ;
 let display = document.getElementById("disp")
 let completeds = document.getElementById("completed")
 
