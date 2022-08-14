@@ -109,7 +109,8 @@ nav{
   margin-left: 400px;
   padding: 10px;
   position: absolute;
-  background: rgb(131, 124, 124);
+  /* background: rgb(131, 124, 124); */
+  background: goldenrod;
   top: 150px;
   flex-direction: row;
   height: 200px;
@@ -159,6 +160,7 @@ nav{
 
 
 /* DIVS THAT CONTAIN THE ITEMS ACCORDING TO DATA */
+
 .completed, .redding , .blueing, .blacking, .alling, .yellowing{
   background-color: rgb(162, 162, 153);
   visibility: hidden;
@@ -172,6 +174,7 @@ nav{
   z-index: 20;
   height: auto;
 }
+
 .show{
   display: block;
   visibility: visible;
@@ -180,6 +183,7 @@ nav{
   margin: 20px;
   z-index: 10;
 }
+
 .hide{
   display: none;
   visibility: hidden;
