@@ -1,7 +1,7 @@
 //Declaration of all variables
 
 let edit = document.getElementById("hello-div") ;
-let text = document.getElementById("hello")
+let text = document.getElementById("hello") ;
 let del = document.getElementsByClassName("create-task")[0]
 let red = document.getElementsByClassName("red-inside")[0]
 let blue = document.getElementsByClassName("blue-inside")[0]
