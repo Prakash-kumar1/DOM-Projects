@@ -5,59 +5,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Project</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7c8663a8f9.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-
-    <!-- Header tag that contains buttons -->
     <header>
-        <nav>
-            <button class="all">All tasks</button>
-            <button class="red">Red</button>
-            <button class="blue">blue</button>
-            <button class="black">black</button>
-            <button class="yellow">yellow</button>
-            <button class="complete">Completed</button>
-        </nav>
-        <span>
-            <button class="create-task">Create Task
-            </button>
-        </span>
-    </header>
-    
-
-    <!-- First div that contains the edit task -->
-
-        <div id="hello-div" class="edit inactive">
-            <form id="form" >
-            <textarea name="text" id="hello" cols="30" rows="10"></textarea>
-            <button class="submit-me">done</button>
-        </form>
-            <div class="to-add-buttons">
-                <button class="red-inside">Red</button>
-                <button class="blue-inside">blue</button>
-                <button class="black-inside">black</button>
-                <button class="yellow-inside">yellow</button>      
+        <div class="main-div">
+            <div class="btns">
+                <button class="btn all">all</button>
+                <button class="btn" id="btn1"></button>
+                <button class="btn" id="btn2"></button>
+                <button class="btn" id="btn3"></button>
+                <button class="btn" id="btn4"></button>
+                <button class="btn all"><i class="fa-solid fa-check"></i></button>
             </div>
-       
+            <div class="create-task">
+                <button class="task">create task</button>
+            </div>
         </div>
-        <div id="disp" class="disp">
-            
- </div>
-         
- <div id="completed" class="completed"></div>
- <div id="alling" class="alling"></div>
- <div id = "redding" class="redding"></div>
- <div id="blueing" class="blueing"></div>
- <div id="blacking" class="blacking"></div>
- <div id="yellowing" class="yellowing"></div>
-    
+    </header>
 
+    <main>
+        <div class="pop-up"></div>
+        <!-- <section>
+            <div class="redSection"></div>
+            <div class="yellowSection"></div>
+            <div class="greenSection"></div>
+            <div class="blackSection"></div>
+        </section> -->
 
+    </main>
+    <script src="./Do.js"></script>
 </body>
-<script src="./Do.js"></script>
+
 </html>
 
 
