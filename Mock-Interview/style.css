@@ -38,18 +38,21 @@ nav{
   border-radius: 10px;
   color: white;
 }
+
 .blue, .blue-inside{
   background-color: blue;
   padding: 5px;
   border-radius: 10px;
   color: white;
 }
+
 .black, .black-inside{
   background-color: rgb(0, 0, 0);
   padding: 5px;
   border-radius: 10px;
   color: white;
 }
+
 .yellow,.yellow-inside{
   background-color: rgb(251, 255, 30);
   padding: 5px;
@@ -143,11 +146,13 @@ nav{
   height: 100%;
   /* background:rgb(132, 132, 216); */
 }
+
 .isc{
   display: flex;
   gap:10px;
   margin:10px;
 }
+
 .bio{
   display: none;
 }
