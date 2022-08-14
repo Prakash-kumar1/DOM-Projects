@@ -1,6 +1,6 @@
 //Declaration of all variables
 
-let edit = document.getElementById("hello-div")
+let edit = document.getElementById("hello-div") ;
 let text = document.getElementById("hello")
 let del = document.getElementsByClassName("create-task")[0]
 let red = document.getElementsByClassName("red-inside")[0]
@@ -86,6 +86,7 @@ done.addEventListener("click", (e) => {
         division.id = "mid"
         divider.append(division)
         // division.style.backgroundColor="red"
+
         //CHECKBOX MADE 
 
         let check = document.createElement("input")
