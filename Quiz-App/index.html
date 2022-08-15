@@ -8,34 +8,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="main-div">
-        <div class="inner-div">
-            <h2 class="questions">Questions Comes Here</h2>
-            <ul>
-                <li>
-                    <input type="radio" name="answer" id="ans1" class="answer">
-                    <label for="ans1" id="option1"> Answer Option</label>
-                </li>
+    <section class="main">
 
-                <li>
-                    <input type="radio" name="answer" id="ans1" class="answer">
-                    <label for="ans1" id="option1"> Answer Option</label>
-                </li>
-
-                <li>
-                    <input type="radio" name="answer" id="ans1" class="answer">
-                    <label for="ans1" id="option1"> Answer Option</label>
-                </li>
-
-                <li>
-                    <input type="radio" name="answer" id="ans1" class="answer">
-                    <label for="ans1" id="option1"> Answer Option</label>
-                </li>
-            </ul>
-            <button id="submit" >Submit</button>
-            <div id="showScore" class="scoreArea"></div>
+        <div class="container">
+            <div class="col">
+                <h3 id="questionBox">
+                    1) Lorem ipsum dolor sit amet, consectetur adipisicing elit Debitis?
+                </h3>
+            </div>
+            <div class="col box">
+                <input name="option" type="radio" id="first" value="a" required>
+                <label for="first">Testing 1</label>
+            </div>
+            <div class="col box">
+                <input name="option" type="radio" id="second" value="b" required>
+                <label for="second">Testing 2</label>
+            </div>
+            <div class="col box">
+                <input name="option" type="radio" id="third" value="c" required>
+                <label for="third">Testing 3</label>
+            </div>
+            <div class="col box">
+                <input name="option" type="radio" id="fourth" value="d" required>
+                <label for="fourth">Testing 4</label>
+            </div>
+            <button id="submit">Submit</button>
         </div>
-    </div>
+
+    </section>
     <script src="./app.js"></script>
 </body>
 </html>
