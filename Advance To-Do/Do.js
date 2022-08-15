@@ -1,228 +1,276 @@
-const createTask = document.querySelector(".task");
-const red = document.querySelector("#btn1");
-const green = document.querySelector("#btn2");
-const blue = document.querySelector("#btn3");
-const black = document.querySelector("#btn4");
-const popUp = document.querySelector(".pop-up");
-// const redTask = document.querySelector('.redTask');
-// const redSection = document.querySelector('.redSection');
+// Declaration of Variables
 
+const task = document.querySelector("#task");
+const body = document.querySelector("body");
+const allDiv = document.querySelector(".allDiv");
+const red = document.querySelector(".red");
+const yellow = document.querySelector(".yellow");
+const blue = document.querySelector(".blue");
+const black = document.querySelector(".black");
+const tick = document.querySelector(".tick");
 
-createTask.addEventListener('click', (e) => {
-    e.preventDefault();
-    let display = document.createElement('div');
-    display.classList.add('display');
-    let textArea = document.createElement('textArea');
-    textArea.setAttribute('placeholder', 'Enter task here');
-    textArea.classList.add('textArea');
+task.addEventListener("click", function () {
 
-    let btnDiv = document.createElement('div');
-    btnDiv.classList.add('btnDiv');
+    // The setAttribute() method sets a new value to an attribute.If the attribute does not exist, it is created first.
 
+  let mainDiv = document.createElement("div");
+  mainDiv.setAttribute("class", "center");
 
-    //-----------------------------CREATE BUTTONS---------------------------//
-    let redButton = document.createElement('button');
-    btnDiv.append(redButton);
-    redButton.classList.add('redButton');
-    redButton.style.backgroundColor = 'red';
+  let textarea = document.createElement("textarea");
+  textarea.setAttribute("type", "text");
+  textarea.setAttribute("id", "input");
+  textarea.setAttribute("placeholder", "Enter your task!");
+  textarea.setAttribute("cols", "30");
+  textarea.setAttribute("rows", "9");
 
-    let yellowButton = document.createElement('button');
-    btnDiv.append(yellowButton);
-    yellowButton.classList.add('yellowButton');
-    yellowButton.style.backgroundColor = 'yellow';
+  let btn = document.createElement("button");
+  btn.setAttribute("id", "btn");
+  btn.innerText = "Done";
 
-    let blueButton = document.createElement('button');
-    btnDiv.append(blueButton);
-    blueButton.classList.add('blueButton');
-    blueButton.style.backgroundColor = 'blue';
+  let innerDiv = document.createElement("div");
+  innerDiv.setAttribute("id", "colors");
 
-    let blackButton = document.createElement('button');
-    btnDiv.append(blackButton);
-    blackButton.classList.add('blackButton');
-    blackButton.style.backgroundColor = 'black';
+  let redDiv = document.createElement("div");
+  redDiv.setAttribute("class", "red1");
 
-    let submitBtn = document.createElement('button');
-    submitBtn.classList.add('submitBtn');
-    submitBtn.innerText = 'done';
+  let yellowDiv = document.createElement("div");
+  yellowDiv.setAttribute("class", "yellow1");
 
-    let crossBtn = document.createElement('button');
-    crossBtn.classList.add('crossBtn');
-    crossBtn.innerText = 'x';
+  let blueDiv = document.createElement("div");
+  blueDiv.setAttribute("class", "blue1");
 
+  let blackDiv = document.createElement("div");
+  blackDiv.setAttribute("class", "black1");
 
-    
-    redButton.addEventListener('click', ()=>{
-        textArea.style.backgroundColor =  'red';
-        display.style.backgroundColor = 'red';
-    });
+  let cross = document.createElement("i");
+  cross.setAttribute("class", "fa-solid fa-xmark cross");
 
-    yellowButton.addEventListener('click', ()=>{
-        textArea.style.backgroundColor =  'yellow';
-        display.style.backgroundColor = 'yellow';
-    });
+  innerDiv.append(redDiv, yellowDiv, blueDiv, blackDiv);
+  mainDiv.append(textarea, btn, innerDiv, cross);
+  body.append(mainDiv);
 
-    blueButton.addEventListener('click', ()=>{
-        textArea.style.backgroundColor =  'blue';
-        display.style.backgroundColor = 'blue';
-    });
+  cross.addEventListener("click", function () {
+    this.parentElement.remove();
+  });
 
-    blackButton.addEventListener('click', ()=>{
-        textArea.style.backgroundColor =  'black';
-        display.style.backgroundColor = 'black';
-    });
-    
-    
-    display.appendChild(textArea);
-    display.append(btnDiv);
-    display.append(crossBtn);
-    display.append(submitBtn);
+  let div1 = document.createElement("div");
 
-    popUp.append(display);
+  redDiv.addEventListener("click", function () {
+    div1.style.borderTop = "15px solid red";
+    this.style.border = "3px solid seagreen";
+  });
 
-    crossBtn.addEventListener('click', (event)=>{
-        event.target.parentElement.remove();
-    });
+  yellowDiv.addEventListener("click", function () {
+    div1.style.borderTop = "15px solid yellow";
+    this.style.border = "3px solid seagreen";
+  });
 
+  blueDiv.addEventListener("click", function () {
+    div1.style.borderTop = "15px solid blue";
+    this.style.border = "3px solid seagreen";
+  });
 
-    // crossBtn.addEventListener('click',()=>{
-    //     crossBtn.parentElement.parentElement.remove();
-    // });
+  blackDiv.addEventListener("click", function () {
+    div1.style.borderTop = "15px solid black";
+    this.style.border = "3px solid seagreen";
+  });
 
+  btn.addEventListener("click", function () {
+    if (textarea.value.length > 0) {
+      let todoList = document.createElement("div");
+      todoList.setAttribute("class", "todoList");
 
-    // submitBtn.addEventListener('click',()=>{
-    //     inputText.setAttribute('readonly','readonly');
-    //     if(textArea.innerText.length>0){
-    //         let display2 = document.createElement('div');
-    //         display2.classList.add('display2');
+      div1.setAttribute("class", "div1");
 
-    //         display2.append(textArea);
-    //         redTask.append(display2);
+      let input1 = document.createElement("input");
+      input1.setAttribute("type", "text");
+      input1.setAttribute("id", "input");
 
-    //         display2.innerText = textArea.value;
-    //     }
+      let icons = document.createElement("div");
+      icons.setAttribute("class", "icons");
 
+      let leftIcons = document.createElement("div");
+      leftIcons.setAttribute("class", "leftIcons");
 
+      let check = document.createElement("i");
+      check.setAttribute("class", "fa-solid fa-check check");
+      check.style.display = "none";
 
-    // });
+      let del = document.createElement("i");
+      del.setAttribute("class", "fa-solid fa-trash-can del");
+      del.style.display = "none";
 
+      let edit = document.createElement("i");
+      edit.setAttribute("class", "fa-solid fa-pen edit");
+      edit.style.display = "none";
 
-    submitBtn.addEventListener('click', (event) => {
-        event.preventDefault();
-        event.target.parentElement.remove();
-        let mainTask = textArea.value;
-        
-        
-        if (mainTask.length > 1) {
-            let display2 = document.createElement('div')
-            display2.classList.add('display2');
+      let coloredDiv = document.createElement("div");
+      coloredDiv.setAttribute("class", "coloredDiv");
+      coloredDiv.style.display = "none";
+      coloredDiv.style.backgroundColor = "red";
 
-            let input = document.createElement('input');
-            input.classList.add('input')
-            
-            let bottomDiv = document.createElement('div');
-            bottomDiv.classList.add('bottomDiv');
+      let rightIcons = document.createElement("div");
+      rightIcons.setAttribute("class", "rightIcons");
 
-           
-           
-            //-------------------------------CREATE ICONS--------------------------------// 
-            let check = document.createElement('i');
-            check.setAttribute('class', 'fa-solid fa-check');
-            // editButton.classList
-            check.style.display = 'none';
-            check.style.color = 'green';
-            
-            let trash = document.createElement('i');
-            trash.setAttribute('class', 'fa-solid fa-trash-can');
-            trash.style.display = 'none';
-            trash.style.color = 'red';
+      let lock = document.createElement("i");
+      lock.setAttribute("class", "fa-solid fa-lock lock");
 
-            let edit = document.createElement('i');
-            edit.setAttribute('class', 'fa-solid fa-pen');
-            edit.style.display = 'none';
-            edit.style.color = 'grey';
+      let unlock = document.createElement("i");
+      unlock.setAttribute("class", "fa-solid fa-lock-open unlock");
 
-            let square = document.createElement('i');
-            square.setAttribute('class', 'fa-solid fa-square');
-            square.style.display = 'none';
-            square.style.color = 'red';
-            
-            let unlock = document.createElement('i');
-            unlock.setAttribute('class', 'fa-solid fa-lock-open unlock');
+      leftIcons.append(check, del, edit, coloredDiv);
+      rightIcons.append(lock);
 
-            let lock = document.createElement('i');
-            lock.setAttribute('class', 'fa-solid fa-lock lock');
+      icons.append(leftIcons, rightIcons);
 
+      div1.append(input1, icons);
 
+      todoList.append(div1);
 
-            //------------------------------EVENT LISTENER FOR ICONS------------------------:-
-            lock.addEventListener('click', () => {
-                lock.replaceWith(unlock);
-                input.setAttribute('readonly', 'readonly');
-                edit.style.display = 'block';
-                check.style.display = 'block';
-                square.style.display = 'block';
-                trash.style.display = 'block';
+      body.append(todoList);
 
-            });
+      this.parentElement.remove();
 
-            unlock.addEventListener('click', () => {
-                unlock.replaceWith(lock);
-                edit.style.display = 'none';
-                check.style.display = 'none';
-                square.style.display = 'none';
-                trash.style.display = 'none';
+      input1.value = textarea.value;
+      input1.setAttribute("readonly", "readonly");
 
-            });
+      // Lock and Unlock Change
+      
+      lock.addEventListener("click", function () {
+        this.replaceWith(unlock);
+        check.style.display = "inline-block";
+        del.style.display = "inline-block";
+        edit.style.display = "inline-block";
+        coloredDiv.style.display = "inline-block";
+      });
 
+      unlock.addEventListener("click", function () {
+        this.replaceWith(lock);
+        check.style.display = "none";
+        del.style.display = "none";
+        edit.style.display = "none";
+        coloredDiv.style.display = "none";
+      });
 
-            //-------------------------------ADD EVENT TO ICON-----------------------:-
-            check.addEventListener('click', () => {
-                display2.style.display = 'none';
-            });
+      del.addEventListener("click", function () {
+        this.parentElement.parentElement.parentElement.remove();
+      });
 
-            trash.addEventListener('click', () => {
-                display2.remove();
-            });
-
-            edit.addEventListener('click', () => {
-                input.removeAttribute('readonly');
-            });
-            
-            square.addEventListener('click', ()=>{
-                if(square.style.backgroundColor == 'red'){
-                    square.style.backgroundColor = 'yellow';
-                    display2.style.background = 'yellow';
-
-                }else if (square.style.backgroundColor == 'yellow'){
-                    square.style.backgroundColor = 'blue';
-                    display2.style.background = 'blue';
-
-                }else if(square.style.backgroundColor == 'blue'){
-                    square.style.backgroundColor = 'black';
-                    display2.style.background = 'black';
-
-                }else{
-                    square.style.backgroundColor = 'red';
-                    display2.style.background = 'red';
-                }
-            })
-
-           
-
-            //-------------------------------APPEND TO DISPLAY2-------------------:-
-            popUp.append(display2);
-            display2.append(input);
-            display2.append(bottomDiv);
-            bottomDiv.append(check);
-            bottomDiv.append(trash);
-            bottomDiv.append(edit);
-            bottomDiv.append(square);
-            bottomDiv.append(lock);
-            
-            
-            input.value = textArea.value;
-            input.setAttribute('readonly', 'readonly');
-
+      edit.addEventListener("click", function () {
+        if(this.style.color === "grey") {
+          input1.removeAttribute("readonly");
+          this.style.color = "pink";
+        } else {
+          input1.setAttribute("readonly", "readonly");
+          this.style.color = "grey";
         }
-    });
+      })
+
+      check.addEventListener("click", function () {
+        div1.style.display = "none";
+        this.style.color = "blue";
+      });
+
+      tick.addEventListener("click", function () {
+        if (check.style.color !== "blue") {
+          div1.style.display = "none";
+        } else {
+          div1.style.display = "inline-block";
+        }
+        check.style.display = "none";
+        del.style.display = "none";
+        edit.style.display = "none";
+        coloredDiv.style.display = "none";
+        unlock.replaceWith(lock);
+      });
+
+      coloredDiv.addEventListener("click", function () {
+        if (this.style.backgroundColor === "red") {
+          this.style.backgroundColor = "yellow";
+          div1.style.borderTop = "15px solid yellow";
+        } else if (this.style.backgroundColor === "yellow") {
+          this.style.backgroundColor = "blue";
+          div1.style.borderTop = "15px solid blue";
+        } else if (this.style.backgroundColor === "blue") {
+          this.style.backgroundColor = "black";
+          div1.style.borderTop = "15px solid black";
+        } else {
+          this.style.backgroundColor = "red";
+          div1.style.borderTop = "15px solid red";
+        }
+      });
+
+      red.addEventListener("click", function () {
+        div1.style.display = "inline-block";
+        if (
+          div1.style.borderTop !== "15px solid red" ||
+          check.style.color === "blue"
+        ) {
+          div1.style.display = "none";
+        }
+        check.style.display = "none";
+        del.style.display = "none";
+        edit.style.display = "none";
+        coloredDiv.style.display = "none";
+        unlock.replaceWith(lock);
+        div1.style.position = "relative";
+      });
+
+      yellow.addEventListener("click", function () {
+        div1.style.display = "inline-block";
+        if (
+          div1.style.borderTop !== "15px solid yellow" ||
+          check.style.color === "blue"
+        ) {
+          div1.style.display = "none";
+        }
+        check.style.display = "none";
+        del.style.display = "none";
+        edit.style.display = "none";
+        coloredDiv.style.display = "none";
+        unlock.replaceWith(lock);
+      });
+
+      blue.addEventListener("click", function () {
+        div1.style.display = "inline-block";
+        if (
+          div1.style.borderTop !== "15px solid blue" ||
+          check.style.color === "blue"
+        ) {
+          div1.style.display = "none";
+        }
+        check.style.display = "none";
+        del.style.display = "none";
+        edit.style.display = "none";
+        coloredDiv.style.display = "none";
+        unlock.replaceWith(lock);
+      });
+
+      black.addEventListener("click", function () {
+        div1.style.display = "inline-block";
+        if (
+          div1.style.borderTop !== "15px solid black" ||
+          check.style.color === "blue"
+        ) {
+          div1.style.display = "none";
+        }
+        check.style.display = "none";
+        del.style.display = "none";
+        edit.style.display = "none";
+        coloredDiv.style.display = "none";
+        unlock.replaceWith(lock);
+      });
+
+      allDiv.addEventListener("click", function () {
+        div1.style.display = "block";
+        this.style.border = "2px solid chocolate";
+        this.style.padding = "2px 5px";
+        check.style.display = "none";
+        del.style.display = "none";
+        edit.style.display = "none";
+        coloredDiv.style.display = "none";
+        unlock.replaceWith(lock);
+      });
+    }
+  });
 });
