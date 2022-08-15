@@ -46,6 +46,7 @@ pre.addEventListener('click',previousReview)
 next.addEventListener('click',nextReview)
 
 function previousReview(){
+
     count--
     if (count>review.length-1 || count<0 ) {
         count=review.length-1
@@ -53,8 +54,8 @@ function previousReview(){
     reviews()
    
     // console.log(count)
+    }
     
-}
 function nextReview(){
     count++
     
