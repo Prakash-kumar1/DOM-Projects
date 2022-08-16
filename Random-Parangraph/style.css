@@ -1,0 +1,21 @@
+.row input{
+    width: 100px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 0;
+    font-size: 20px;
+    box-shadow: 0px 0px 2px gray;
+}
+
+.row button{
+   background-color: skyblue;
+    padding: 5px;
+    border-radius: 5px;
+    border: 0;
+    font-size: 20px;
+    color: wheat;
+    outline: none;
+    border: none;
+}
+
+.row
