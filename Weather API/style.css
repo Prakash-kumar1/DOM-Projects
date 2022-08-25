@@ -16,9 +16,15 @@ main{
 
 
 .row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width : 1000px ;
-    height: 100px;
+    margin: 12px;
+    /* height: 100px; */
     border: 2px solid red;
+/* Search box will become in Center */
+    text-align: center;
 }
 
 #search{
