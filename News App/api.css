@@ -1,6 +1,6 @@
 body{
     font-size: large;
-    background-color: antiquewhite;
+    background-color: aquamarine;
   }
   
   .inputClass{
@@ -10,6 +10,7 @@ body{
       border-radius: 20px;
       font-size: x-large;
   }
+
   .inputClass:hover{
       border:2px solid rgb(255, 0, 0);
   }
@@ -17,7 +18,7 @@ body{
   .buttonClass{
       text-align: center; 
       padding: 5px;
-      background-color: rgb(215, 215, 215);
+      background-color: yellow;
       border: 2px solid rgb(0, 0, 0);
       font-size: larger;
       font-weight: 200;
@@ -25,12 +26,14 @@ body{
       align-items: center;
       justify-content: center;
   }
+
   .buttonClass:hover{
-      background-color: rgb(249, 249, 249);
+      background-color: red;
       color: rgb(47, 255, 0);
       border:2px solid rgb(255, 0, 0);
       transition: 0.8s;
   }
+
   p{
       display: inline-block;
   
@@ -41,12 +44,14 @@ body{
       width: 100vh;
       height: auto;
   }
+
   img{
       width: 100vh;
       height: 300px;
       border:none;
       display: inline-block;
   }
+
   h1{
       margin: 10% 0 0 0 ;
       text-align: center;
@@ -60,10 +65,11 @@ body{
       justify-content: center;
   }
   
-  
   .container{
       display: flex;
       border: 1px solif black;
       flex-direction: column;
       align-items: center;
   }
+
+

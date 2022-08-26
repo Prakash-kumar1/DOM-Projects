@@ -1,76 +1,32 @@
-let newsApi = "https://newsapi.org/v2/top-headlines?country=in&apiKey=38d589f25d60454e9de0c974b7be65fa"
-let dummyImage = "C:/Users/Monika Priya Singh/OneDrive/Pictures/Screenshots/download.jpg" ;
+var q=""
+var inputClass = document.querySelector('.inputClass');
+var buttonClass = document.querySelector('.buttonClass');
+var container = document.querySelector('.container');
+inputClass.addEventListener("change",()=>{
+    q=inputClass.value
+    console.log(q)
 
-let app = document.querySelector(".app") ;
-let screen = {
-    main:app.querySelector(".main-screen") ,
-    news:app.querySelector(".news-screen") 
-}
+ })
+ buttonClass.addEventListener('click',function(event){
+    container.innerHTML =""
 
-let categories = ["General","Bussiness","Technology","Entertainment","Health","Science","Sports"]
+    // fetch(`https://newsapi.org/v2/everything?q=${q}&from=2022-07-25&sortBy=publishedAt&apiKey=7f0bf7b97fdf4346b992decbdaa0c15b`)
 
-for(let i=0; i<categories.length ; i++){
-    let div = document.createElement("div") ;
-    div.innerText = categories[1];
-    div.addEventListener("click" , function(){
-        screen.main.querySelector(".categories .active").classList.remove("active") ;
-        div.classList.add("active") ;
-        fetchCategoryNews(categories[1]) ;
-    });
-    if(1 == 0){
-        div.classList.add("active") ;
-        fetchCategoryNews(categories[i])
-    }
-    screen.main.querySelector(".categories ").appendChild(div);
-}
-
-
- async function fetchCategoryNews(category){
-    try{
-        let res = await fetch(newsApi + category.toLowerCase());
-        let data = await res.json() ;
-        let news = data.data ;
-
-        for(let i=0; i<news.length ; i++){
-            let div = document.createElement("div") ;
-            div.classList.add("item");
-            div.addEventListener("click" , function(){
-                showFullNews(news[1]) ;
-            });
-            div.innerHTML = `
-            <div class = "thumbnail">
-            <img src="${news[i].image || dummyImage}">
-            <div>
-            <div class = "details">
-            <h2>${news[i].title}</h2>
-            <p>${news[i].description}</p>
-            <div>
-            ` ;
-            screen.main.querySelector(".news-list").appendChild(div) ;
-
-        }
-    }catch(msg){
-
-    }    
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    // fetch(`https://newsapi.org/v2/everything?q=${q}&from=2022-07-26&sortBy=publishedAt&apiKey=e53ee295b9c7459da80e049c910e8e0f`)
+    fetch(`https://newsapi.org/v2/top-headlines?country=tr&apiKey=38d589f25d60454e9de0c974b7be65fa`)
+    .then(result=>result.json())
+    .then(data=>{
+        let articles = data["articles"]
+            
+        for(let i=0;i<10;i++){
+            let article = articles[i]
+            let html = `<div>
+                <img src=${article["urlToImage"]}>
+                <h1>${article["title"]} </h1>
+                <p>${article["author"]}</p>
+                <p>${article["description"]} <a href=${article["url"]}>Read more</a> </p>
+                </div>`
+                container.innerHTML+=html
+            }
+        }).catch(err=>alert("error"))
+    })
