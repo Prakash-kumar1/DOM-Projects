@@ -11,6 +11,7 @@
     
     ]
 
+
     let bestSellersLeftArr = [
         {img_url:"https://cdn.shopify.com/s/files/1/0906/2558/products/1_c30a9b16-ef13-44c3-af41-04b227c62419.jpg?v=1642434141", name : "LIP ZIP MATTE TOPPER", price: "499", text : "ADD TO CART",},
         {img_url:"https://cdn.shopify.com/s/files/1/0906/2558/products/01_d6ffec78-c2b6-4466-8672-233fee0285a8.jpg?v=1640791955", name : "MATTE AS HELL CRAYON LIPSTICK", price: "799",text : "SELECT SHADE",},
