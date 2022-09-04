@@ -1,4 +1,4 @@
-// let middle_slide_bar_div = document.querySelector(".middle_s_w")
+
 
     let top_slide_images_arr = [
         {url : "https://sugar-mobile-application.s3-ap-south-1.amazonaws.com/d9103d2b-af25-40c3-b41b-90538502b315.gif"},
