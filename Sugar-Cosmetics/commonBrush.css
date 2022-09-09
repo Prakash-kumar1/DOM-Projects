@@ -94,13 +94,14 @@ body{
 body img,button,i:hover{
     cursor: pointer;
 }
-
 #home_btn{
     display: flex;
     margin-left: 82px;
-    font-size: 18px;  
+    font-size: 18px;
+    
 }
 
 #home{
     margin-right: 10px;
+  
 }
