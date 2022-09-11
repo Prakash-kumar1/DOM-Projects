@@ -3,6 +3,7 @@
     let data = await response.json() ;
     data = data.results ;
     data.map((oneData)=>{
+        
 
     })
 })
