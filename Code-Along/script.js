@@ -3,7 +3,11 @@
     let data = await response.json() ;
     data = data.results ;
     data.map((oneData)=>{
-        
+        let main = document.querySelector('main');
+        main.innerHTML += <div className="movie">
+            <img src="https://image.tmdb.org/t/p/original/${oneData.poster_path}"></img>
+            <h2>${oneData.title}</h2>
+        </div>
 
     })
 })
