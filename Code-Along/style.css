@@ -69,9 +69,9 @@ main .movie h2{
 footer{
     background-color: black;
     color: white;
-display: flex;
-align-items: center;
- justify-content: center;
+    display: flex;
+    align-items: center;
+     justify-content: center;
 }
 
 

@@ -25,6 +25,6 @@ function add_to_cart(e){
         cart.push(data[i])
     }
    }
-   console.log(cart)
+   console.log(cart) ;
 
 }
