@@ -22,9 +22,9 @@ function add_to_cart(e){
    let idd = e.target.id ;
    for(let i=0 ; i<data.length ; i++){
     if(data[i].id === idd){
-        cart.push
-
+        cart.push(data[i])
     }
    }
+   console.log(cart)
 
 }
