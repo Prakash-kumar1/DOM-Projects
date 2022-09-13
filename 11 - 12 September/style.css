@@ -26,9 +26,11 @@ header{
 
 .cart{
     font-size: xx-large;
-    margin-top: 10px;
+    margin-right: 20px;
     margin-top: 20px;
 }
+
+/* Javascript Part */
 
 main{
     display: grid;
