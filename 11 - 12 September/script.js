@@ -12,7 +12,7 @@ var cart = 0 ;
             <img src="https://image.tmdb.org/t/p/original/${oneData.poster_path}">
             <div class="head-er" >
             <h2>${oneData.title}</h2>
-            <button class="addButton" onClick="add_to_cart(event)" id = ${oneData.id}>Add+</button>
+            <button class="addBtn" onClick="add_to_cart(event)" id = ${oneData.id}>Add+</button>
             </div>   
         </div>` ;
 
