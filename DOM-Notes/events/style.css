@@ -33,3 +33,22 @@ button{
 .hidden-content.reveal-btn{
     display: block;
 }
+
+#sports{
+    width: 150px;
+    border: 3px solid red;
+    border-radius: 1rem;
+    padding: 30px;
+    background-color: black;
+    color: aquamarine;
+}
+
+li{
+    border: 2px solid gold;
+    margin-top: 15px;
+    padding: 5px;
+    text-align: center;
+}
+
+
+
