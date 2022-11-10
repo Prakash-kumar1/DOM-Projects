@@ -30,7 +30,21 @@ function revealContent() {
     }
 }
 
-revealBtn.addEventListener('click' , revealContent)
+revealBtn.addEventListener('click' , revealBtn) ;
+
+
+// ###@@@@@  Read From Technical suneja OR  you tube #####@@@
+
+// Event  Propagation  Definition ==>>  when we click on button  {"Target"} ,  it will goto  div , after Div it will goto  body ,
+//                                     after Body it will goto  HTML , after HTML it will goto  Document this is known as "Event Bubbling" ,
+//  and when it returns from document to HTML -->> body -->> div -->> Button ,this is known as "Event Capturing" , this whole Propogation 
+//  is known as Event  Propagation .          // Event  Propagation  has 3 phases 
+                                              // First phase  =>>  Event  Capturing
+                                              // Second phase  =>>  Target
+                                              // Third phase  =>>  Event  Bubbling
+
+
+
 
 
 
