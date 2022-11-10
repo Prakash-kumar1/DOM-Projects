@@ -38,7 +38,11 @@ console.log(firstListItems.innerText[2]) ;
 // Adding New Element
 li.innerText = "X-men : Apocalypse" ;
 
+// Modifying Attributes and classes
+li.setAttribute('class' , 'list-items') ;
 
+// removing Attribute ("X-men : Apocalypse"  become normal)
+li.removeAttribute('class') ;
 
 
 
