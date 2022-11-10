@@ -29,7 +29,14 @@ const li = document.createElement('li') ;
 ul.append(li) ;
 
 // Modifying the text
+const firstListItems =  document.querySelector('.list-items') ;
+console.log(firstListItems.innerText) ;
+console.log(firstListItems.textContent) ;
+console.log(firstListItems.innerHTML) ;
+console.log(firstListItems.innerText[2]) ;
 
+// Adding New Element
+li.innerText = "X-men : Apocalypse" ;
 
 
 
