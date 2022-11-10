@@ -44,6 +44,12 @@ li.setAttribute('class' , 'list-items') ;
 // removing Attribute ("X-men : Apocalypse"  become normal)
 li.removeAttribute('class') ;
 
+let title1 = document.querySelector("#main-heading") ;
+console.log(title1.getAttribute('id')) ;
+
+const title2 = document.querySelector(".list-items") ;
+console.log(title2.getAttribute('class')) ;
+
 
 
 
