@@ -19,7 +19,6 @@ listItems[i].style.fontSize = "2rem" ;
 }
 
 
-
 // Creating elements
 
 const ul = document.querySelector('ul') ;
@@ -41,6 +40,7 @@ li.innerText = "X-men : Apocalypse" ;
 // Modifying Attributes and classes
 li.setAttribute('class' , 'list-items') ;
 
+
 // removing Attribute ("X-men : Apocalypse"  become normal)
 li.removeAttribute('class') ;
 
@@ -51,6 +51,10 @@ const title2 = document.querySelector(".list-items") ;
 console.log(title2.getAttribute('class')) ;
 
 
+// adding like a class
+li.classList.add('list-items') ;
+// removing from a class
+li.classList.remove('list-items') ;
 
 
 
