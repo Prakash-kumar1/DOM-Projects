@@ -58,6 +58,45 @@ li.classList.remove('list-items') ;
 
 
 
+// Creating elements
+
+const ol = document.querySelector('ol') ;
+const li = document.createElement('li') ;
+
+// Adding Elements
+ol.append(li) ;
+
+// Modifying the text
+const firstListItem =  document.querySelector('.list-items') ;
+console.log(firstListItem.innerText) ;
+console.log(firstListItem.textContent) ;
+console.log(firstListItem.innerHTML) ;
+console.log(firstListItem.innerText[2]) ;
+
+// Adding New Element
+li.innerText = "Brahmastra : Shiva" ;
+
+// Modifying Attributes and classes
+li.setAttribute('class' , 'list') ;
+
+
+// removing Attribute ("X-men : Apocalypse"  become normal)
+li.removeAttribute('class') ;
+
+let title3 = document.querySelector("#main") ;
+console.log(title3.getAttribute('id')) ;
+
+const title4 = document.querySelector(".list") ;
+console.log(title4.getAttribute('class')) ;
+
+
+// adding like a class
+li.classList.add('list') ;
+// removing from a class
+// li.classList.remove('list-items') ;
+
+
+
 
 
 
