@@ -55,6 +55,8 @@ console.log(title2.getAttribute('class')) ;
 li.classList.add('list-items') ;
 // removing from a class
 li.classList.remove('list-items') ;
+// For removing Element Completely
+// li.remove() ;
 
 
 // ####### ==>  Also trying for IInd Div  <<==#########
@@ -96,46 +98,69 @@ console.log(title4.getAttribute('class')) ;
 p.classList.add('list') ;
 // removing from a class
 p.classList.remove('list') ;
+// For removing Element Completely
+p.remove() ;
+
+
+// #######   DOM  Traversal  ###########
+
+// Parent Node Traversal
+let ul1 = document.querySelector('ul') ;
+console.log(ul1.parentNode) ;
+console.log(ul1.parentElement) ;
+
+console.log(ul1.parentNode.parentNode) ;
+console.log(ul1.parentElement.parentElement) ;
+
+console.log(ul1.parentNode.parentNode.parentNode) ;
+console.log(ul1.parentElement.parentElement.parentElement.parentElement) ;
+
+
+const html = document.documentElement ;
+console.log(html.parentNode) ;
+console.log(html.parentElement) ;
+
+
+// childNode property
+let ol1 = document.querySelector('ol') ;
+console.log(ol1.childNodes) ;
+console.log(ol1.firstChild) ;
+console.log(ol1.lastChild) ;
+
+
+ol1.childNodes[5].style.backgroundColor = "orange" ;
+ol1.childNodes[5].style.borderRadius = "9rem" ;
+ul1.childNodes[7].style.backgroundColor = "gold" ;
+ul1.childNodes[7].style.marginLeft = "7rem" ;
+ul1.childNodes[5].style.borderRadius = "9rem" ;
 
 
 
+//  children property
+console.log(ol1.children) ;
+console.log(ol1.firstElementChild) ;
+console.log(ol1.lastElementChild) ;
+
+console.log(ul1.children) ;
+console.log(ul1.firstElementChild) ;
+console.log(ul1.lastElementChild) ;
 
 
+// Sibling Node Traversal
+
+let ul2 = document.querySelector('ul') ;
+const div = document.querySelector('div') ;
+
+console.log(div.childNodes) ;
+
+console.log(ul2.previousSibling) ;
+console.log(ul2.nextSibling) ;
 
 
+console.log(ul2.previousElementSibling) ;
+console.log(ol1.previousElementSibling) ;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(ul2.nextElementSibling) ;   //gives Null because no element after ul
 
 
 
