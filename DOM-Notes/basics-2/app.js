@@ -57,31 +57,33 @@ li.classList.add('list-items') ;
 li.classList.remove('list-items') ;
 
 
+// ####### ==>  Also trying for IInd Div  <<==#########
+
 
 // Creating elements
 
 const ol = document.querySelector('ol') ;
-const li = document.createElement('li') ;
+const p = document.createElement('p') ;
 
 // Adding Elements
-ol.append(li) ;
+ol.append(p) ;
 
 // Modifying the text
-const firstListItem =  document.querySelector('.list-items') ;
+const firstListItem =  document.querySelector('.list') ;
 console.log(firstListItem.innerText) ;
 console.log(firstListItem.textContent) ;
 console.log(firstListItem.innerHTML) ;
 console.log(firstListItem.innerText[2]) ;
 
 // Adding New Element
-li.innerText = "Brahmastra : Shiva" ;
+p.innerText = "Brahmastra : Shiva" ;
 
 // Modifying Attributes and classes
-li.setAttribute('class' , 'list') ;
+p.setAttribute('class' , 'list') ;
 
 
 // removing Attribute ("X-men : Apocalypse"  become normal)
-li.removeAttribute('class') ;
+p.removeAttribute('class') ;
 
 let title3 = document.querySelector("#main") ;
 console.log(title3.getAttribute('id')) ;
@@ -91,9 +93,9 @@ console.log(title4.getAttribute('class')) ;
 
 
 // adding like a class
-li.classList.add('list') ;
+p.classList.add('list') ;
 // removing from a class
-// li.classList.remove('list-items') ;
+p.classList.remove('list') ;
 
 
 
