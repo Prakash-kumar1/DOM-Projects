@@ -1,11 +1,15 @@
 var form = document.getElementById('addForm') ;
 var itemList = document.querySelector('#items') ;
+var filter = document.getElementById('filter') ;
 
 // Form submit event 
 form.addEventListener('submit' , addItem) ;
 
 // Delete event
 itemList.addEventListener('click' , removeItem) ;
+
+// Filter event
+filter.addEventListener('keyup' , filterItems) ;
 
 // Add item 
 function addItem(e){
@@ -51,7 +55,20 @@ function removeItem(e){
 }
 
 
+// Filter Items
+function  filterItems(){
+    // convert text to lowerCase
+    var text = e.target.value.toLowerCase() ;
+    // get Li's
+    var items = itemList.getElementsByTagName('li') ;
+    // Convert to an Array
+    Array.from(items).forEach(function(item){
+        var itemName = item.firstChild.textContent ;
+        if(itemName.toLowerCase().indexOf(text) != -1){
 
+        }
+    }) ;
+}
 
 
 
