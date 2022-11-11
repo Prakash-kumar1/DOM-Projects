@@ -56,7 +56,7 @@ function removeItem(e){
 
 
 // Filter Items
-function  filterItems(){
+function  filterItems(e){
     // convert text to lowerCase
     var text = e.target.value.toLowerCase() ;
     // get Li's
@@ -65,7 +65,9 @@ function  filterItems(){
     Array.from(items).forEach(function(item){
         var itemName = item.firstChild.textContent ;
         if(itemName.toLowerCase().indexOf(text) != -1){
-
+            item.style.display = 'block' ;
+        }else{
+            item.style.display = 'none' ;
         }
     }) ;
 }
