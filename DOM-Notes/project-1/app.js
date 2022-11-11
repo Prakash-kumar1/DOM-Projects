@@ -19,6 +19,20 @@ li.className = 'list-group-item' ;
 
 // add text node with Input value
 li.appendChild(document.createTextNode(newItem)) ;
+
+// Create  Delete  button element
+let deleteBtn = document.createElement('button') ;
+
+// Add Classes to  Delete  button element
+deleteBtn.className = 'btn btn-danger btn-sm float-right delete' 
+
+// append text node
+deleteBtn.appendChild(document.createTextNode('X')) ;
+
+// Append button to Li
+li.appendChild(deleteBtn) ;
+
+// Append  li to List
 itemList.appendChild(li) ;
 }
 
