@@ -9,14 +9,17 @@ function addItem(e){
     e.preventDefault() ;
 
 // Get Input value 
-var newItem = document.getElementById('item') ;
+var newItem = document.getElementById('item').value ;
 
 // create new Li Element
-let li = document.createElement('li') ;
+var li = document.createElement('li') ;
 // Add Class
 li.className = 'list-group-item' ;
-console.log(li) ;
+// console.log(li) ;
 
+// add text node with Input value
+li.appendChild(document.createTextNode(newItem)) ;
+itemList.appendChild(li) ;
 }
 
 
