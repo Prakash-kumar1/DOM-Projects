@@ -4,6 +4,9 @@ var itemList = document.querySelector('#items') ;
 // Form submit event 
 form.addEventListener('submit' , addItem) ;
 
+// Delete event
+itemList.addEventListener('click' , removeItem) ;
+
 // Add item 
 function addItem(e){
     e.preventDefault() ;
@@ -37,7 +40,15 @@ itemList.appendChild(li) ;
 }
 
 
-
+// Remove Item
+function removeItem(e){
+    if(e.target.classList.contains('delete')){
+        if(confirm('Are you sure !!')){
+            var li = e.target.parentElement ;
+            itemList.removeChild(li) ;
+        }
+    }
+}
 
 
 
