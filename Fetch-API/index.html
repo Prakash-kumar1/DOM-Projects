@@ -8,17 +8,29 @@
 </head>
 <body>
     <buttton id="getText">Get Text</buttton>
+    <div id="output"></div>
 
     <script>
         document.getElementById('getText').addEventListener
         ('click' , getText) ;
 
         function getText(){
-          fetch('sample.txt')
-          .then(function(res){
-            console.log(res) ;
-            console.log(res.text()) ;
+        //   fetch('sample.txt')
+        //   .then(function(res){
+        //     // console.log(res) ;
+        //     // console.log(res.text()) ;
+        //     return res.text() ;
+        //   })
+        //   .then(function(data){
+        //     console.log(data) ;
+        // })
+
+        fetch('sample.txt')
+          .then((res) => res.text())
+          .then((data) => {
+            document.getElementById('output').innerHTML = data ;
           })
+          .catch((err) => alert('page not found'))
         }
     </script>
 </body>
