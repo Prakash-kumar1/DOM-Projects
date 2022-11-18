@@ -8,11 +8,14 @@
 </head>
 <body>
     <buttton id="getText">Get Text</buttton>
+    <buttton id="getUsers">Get Users</buttton>
     <div id="output"></div>
 
     <script>
         document.getElementById('getText').addEventListener
         ('click' , getText) ;
+        document.getElementById('getUsers').addEventListener
+        ('click' , getUsers) ;
 
         function getText(){
         //   fetch('sample.txt')
@@ -26,6 +29,15 @@
         // })
 
         fetch('sample.txt')
+          .then((res) => res.text())
+          .then((data) => {
+            document.getElementById('output').innerHTML = data ;
+          })
+          .catch((err) => alert('page not found'))
+        }
+
+        function getUsers(){
+        fetch('users.json')
           .then((res) => res.text())
           .then((data) => {
             document.getElementById('output').innerHTML = data ;
