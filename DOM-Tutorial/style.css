@@ -24,16 +24,21 @@
     background-size: cover;
     color: white;
   }
+
+  /* Adding this class using classList */
   .bg-dark {
-    background: #000;
+    background: green;
     color: #eee;
   }
   
+  /* Removing this class using classList */ 
   .container {
     max-width: 1200px;
     margin: auto;
-    width: 90%;
+    width: 70%;
   }
+
+  
   .nav {
     min-height: 8vh;
     display: flex;

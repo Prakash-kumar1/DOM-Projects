@@ -114,8 +114,7 @@ for(let to of todo){
 
 // *********************************************************************************************************************************************************************************************
 
-
-// !!!@@@###$$$===>>>>>   innerHtML    !!!@@@###$$$===>>>>>  
+// !!!@@@###$$$===>>>>>   innerHtML (to add HTML element)   !!!@@@###$$$===>>>>>  
 // const headline = document.querySelector(".headline");
 // console.log(headline.innerHTML);
 // headline.innerHTML = "<h1>Inner html changed </h1>";
@@ -123,7 +122,178 @@ for(let to of todo){
 // headline.innerHTML += "<button class= \"btn\"> using Inner html  </button>" 
 // console.log(headline.innerHTML);
 
+const todoList = document.querySelector(".todo-list") ;
+console.log(todoList.innerHTML);
+// Adding some new todo's but don't use this method because it has some performance issues
+todoList.innerHTML += "<li>Gym</li>"
+todoList.innerHTML += "<li>Marriage</li>"
+todoList.innerHTML += "<li>teach Students</li>"
+
+// *********************************************************************************************************************************************************************************************
+
+// Classlist :- returns collection  of the class attributes of the element
+const sectionTodo = document.querySelector(".section-todo");
+console.log(sectionTodo.classList);
+
+// adding a new class
+sectionTodo.classList.add('bg-dark') ;
+
+// removing a  class
+sectionTodo.classList.remove('container') ;      // removing container class, now it takes whole width
+
+
+// #### classList.toggle =>>  The toggle() button is used for toggling classes to the element. It means if the class is not present
+//                            then it adds a new class or if the class is present then it removes the existing classes.
+// example
+sectionTodo.classList.toggle("bg-dark") ;        // Now, bg-dark is removed
+sectionTodo.classList.toggle("container") ;        // Now, container is added
+
+
+// !!!@@@###$$$===>>>>>  Clonning Nodes
+const ul = document.querySelector(".todo-list")
+const li = document.createElement("li") ;
+li.textContent = "creating new node (line no- 155)" ;
+ul.append(li) ;
+// prepend will ake this above all items
+ul.prepend(li) ;
+
+// there is only one process apply either append or prepend but if i want to append and prepend li then i need to clone the node.
+const li2 = li.cloneNode(true)          // true for deep clonning
+ul.append(li2) ;
+
+
+// !!!@@@###$$$===>>>>>  append child
+const ul1 = document.querySelector(".todo-list")
+const li1 = document.createElement("li") ;
+li1.textContent = "using append child" ;
+ul.appendChild(li1) ;
+// removing the child
+ul.removeChild(li1) ;
+
+
+// !!!@@@###$$$===>>>>>  Static list  vs  live list
+// querySelectorAll  gives Static list 
+// getElementsBySomething gives Live list
+
+const listItems = document.querySelectorAll(".todo-list li") ;
+console.log(listItems) ;
+const sixthLi = document.createElement("li") ;
+sixthLi.textContent = "item 7 (Static list  vs  live list)" ;
+
+const ul2 = document.querySelector(".todo-list") ;
+ul2.append(sixthLi) ;
+console.log(listItems) ;
+
+// !!!@@@###$$$===>>>>> How to get Dimensions of Element
+
+// getBoundingClientRect() :- it gives all information like height, width, left and Right margin about an element.
+const sectionTodo1 = document.querySelector(".section-todo") ;
+const info = sectionTodo1.getBoundingClientRect() ;
+console.log(info) ; 
+
+// for getting only height
+const info1 = sectionTodo1.getBoundingClientRect().height ;
+console.log(info1) ; 
 
 
 // *********************************************************************************************************************************************************************************************
+
+
+// <!-- Question no:-4  what is event in javascript ??
+// answer =>>   JavaScript's interaction with HTML is handled through events that occur when the user or the browser manipulates a page.
+//              When the page loads, it is called an event. When the user clicks a button, that click too is an event.
+
+// The addEventListener() method attaches an event handler to the specified element. 
+const btn = document.querySelector(".btn-headline") ;
+
+function clickMe(){
+    console.log("you clicked me using addEventListener()")
+}
+
+btn.addEventListener("click", clickMe) ;
+
+// or we can also write this way
+const btn1 = document.querySelector(".done") ;
+
+btn1.addEventListener("click", function(){
+    console.log("you clicked Done !!!")
+}) ;
+
+
+// or we can also write this way
+const btn2 = document.querySelector(".remove") ;
+
+btn2.addEventListener("click", () => {
+    console.log("you clicked Remove using arrow Functions !!!")
+}) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
