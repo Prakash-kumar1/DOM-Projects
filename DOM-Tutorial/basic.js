@@ -228,72 +228,83 @@ btn2.addEventListener("click", () => {
 }) ;
 
 
+// !!!@@@###$$$===>>>>>  Keypress Event
+const body = document.body ;
+body.addEventListener("keypress", (e)=>{
+    console.log(e) ;
+    console.log(e.key) ;
+})
 
+// !!!@@@###$$$===>>>>>  Mouseover Event
+const mainButton = document.querySelector(".btn-headline") ;
+mainButton.addEventListener("mouseover", (e)=>{
+    console.log("mouseover event occured !!!") ;
+})
 
+mainButton.addEventListener("mouseleave", (e)=>{
+    console.log("mouseleave event occured !!!") ;
+})
 
 
+// *********************************************************************************************************************************************************************************************
 
+// Creating To Do
+const todoForm = document.querySelector(".form-todo") ;
+const todoInput = document.querySelector(".form-todo input[type='text']")
+const todoList1 = document.querySelector(".todo-list") ;
+console.log(todoInput) ;
 
+todoForm.addEventListener("submit", (e)=>{
+    e.preventDefault() ;
+    // console.log("submit event")
+console.log(todoInput.value) ;
 
+const newTodoText = todoInput.value ;
+const newLi = document.createElement("li") ;
 
+const newLiInnerHtml = `
+                    <span class="text">${newTodoText}</span>
+                    <div class="todo-buttons">
+                      <button class="todo-btn done">Done</button>
+                      <button class="todo-btn remove">Remove</button>
+                    </div> ` ;
 
+        newLi.innerHTML = newLiInnerHtml ;
+        console.log(newLi) ;
 
+// appending in ul for displaying on screen
+todoList1.append(newLi) ;
 
+todoInput.value = "" ;
+})
 
 
+// Adding Functionality on Done and Remove button by using Event DElegation
 
+todoList1.addEventListener("click", (e)=>{
+    console.log(e.target) ;
 
+//check if user clicked on Done OR Remove Button
+// console.log(e.target.classList) ;
 
+//check if user clicked only on Done Button
+if(e.target.classList.contains("done")){
+console.log("great !!!") ;
 
+const liSpan = e.target.parentNode.previousElementSibling ;
+liSpan.style.textDecoration = "Line-through" ;
+}
 
+//check if user clicked only on remove Button
+if(e.target.classList.contains("remove")){
+console.log("Do you want to remove something ?? ") ;
 
+const targetedLi = e.target.parentNode.parentNode ;
+targetedLi.remove() ;
+}
 
+})
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// *********************************************************************************************************************************************************************************************
 
