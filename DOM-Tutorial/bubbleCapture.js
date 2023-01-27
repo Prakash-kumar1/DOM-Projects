@@ -24,7 +24,6 @@ const child = document.querySelector(".child") ;
 // })
 
 
-
 // // Question no:-1 =>>  what is Event Capturing in JavaScript ??
 // // Answer =>> Event capturing is one of two ways to do event propagation in the HTML DOM. In event capturing, an event propagates 
 // //            from the outermost element  to the target element. Capturing happens before bubbling.
